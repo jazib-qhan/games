@@ -1,7 +1,7 @@
-angular.module('empower.factories').factory 'GetDashboardDataZoned',(railsResourceFactory, $http)->
+angular.module('gmaps.factories').factory 'GetDashboardDataZoned',(railsResourceFactory, $http)->
   GetDashboardDataZoned = railsResourceFactory({
-    url: '/home/index_localized?time_zone={{time_zone}}',
-    name: 'set_timezone'
+    url: '/home.json',
+    name: 'get_home'
   })
 
   GetDashboardDataZoned

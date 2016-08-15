@@ -1,4 +1,4 @@
-#whole-dashboard(ng-controller="DashboardCtrl" ng-init="init(#{current_user.id}, '#{current_user.last_timezone}')")
+#whole-dashboard(ng-controller="DashboardCtrl" ng-init="init()")
   %header.sub-head.guide-subheader.patient-subheader.user-man
     .container
       .row
@@ -20,30 +20,8 @@
                         .row.datatables-top
                           .col-sm-6
 
-                      %table.table.demo.table-bordered#guide-table
-                        %thead#dashboard-table-head
-                          %tr
-                            %th.w-50.user-table-border.text-center(data-sort-ignore="true")
-                            %th.user-table-border
-                              Name
-                            %th.w-200.user-table-border
-                              Last CheckIn
-                            %th.w-90.user-table-border.text-center
-                              Activity
-                            %th.w-90.user-table-border.text-center
-                              Distress
-                            %th.w-90.user-table-border.text-center
-                              Pain
-                            %th.w-90.user-table-border.text-center
-                              Fatigue
-                            %th.w-150.user-table-border
-                              Challenge
-                            %th.w-50.user-table-border.text-center.t-action(data-sort-ignore="true")
-                              Details
-
-                        %tbody#dashboard-d(style="display: none" )
-                          = render "index.html.haml"
-
+                      %div(style="width: 800px;")
+                        #geolocation(style='width: 800px; height: 400px;')
 
   = render "index.js.haml"
 

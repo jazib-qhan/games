@@ -1,11 +1,14 @@
 :javascript
-  $("#guide-table").footable({
-    breakpoints: {
-      tiny: 100,
-      medium: 555
-    },
-    big: 2048
+  var handler = Gmaps.build('Google');
+  handler.buildMap({ internal: {id: 'geolocation'} }, function(){
+    if(navigator.geolocation)
+      navigator.geolocation.getCurrentPosition(displayOnMap);
   });
-  var offset = $('.navbar').height() + 97;
-  $('#guide-table').stickyTableHeaders({ fixedOffset: offset, cacheHeaderHeight: true });
 
+  function displayOnMap(position){
+    var marker = handler.addMarker({
+      lat: position.coords.latitude,
+      lng: position.coords.longitude
+    });
+    handler.map.centerOn(marker);
+  };

@@ -13,17 +13,13 @@ app = angular.module("gmaps",[
                                     "ui.bootstrap.pagination",
                                     "ui.bootstrap.popover",
                                     'ui.bootstrap.tpls',
-                                    'ng-sortable',
-                                    'ui.footable',
                                     "gmaps.controllers",
                                     "gmaps.services",
                                     "gmaps.widgets",
                                     'gmaps.factories',
                                     'ngAnimate',
                                     'gmaps.directives',
-                                    'templates',
-                                    'angularUtils.directives.dirPagination',
-                                    'angularMoment'])
+                                    'templates'])
 
 
 app.config ($httpProvider, railsSerializerProvider, RailsResourceProvider) ->

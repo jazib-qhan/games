@@ -49,6 +49,7 @@ gem 'delayed_job_active_record'
 gem "daemons"
 gem 'remotipart', '~> 1.2'
 gem 'gmaps4rails'
+gem 'net-ssh'
 #assets
 gem 'angularjs-rails'
 gem 'angularjs-rails-resource'
