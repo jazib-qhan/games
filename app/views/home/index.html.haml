@@ -1,0 +1,49 @@
+#whole-dashboard(ng-controller="DashboardCtrl" ng-init="init(#{current_user.id}, '#{current_user.last_timezone}')")
+  %header.sub-head.guide-subheader.patient-subheader.user-man
+    .container
+      .row
+        .col-sm-2.text-left
+          %h2
+            Dashboard
+
+  .container
+    #content-wrapper.row.user-wrapper
+      .col-xs-12.cont-with-top.with-home.users-new-top-90
+        .row
+          .col-sm-12
+            .box.bordered-box.blue-border{:style => "margin-bottom:0;"}
+              .row
+                .col-sm-12
+                  .box.bordered-box.orange-border{:style => "margin-bottom:30px;"}
+                    .box-content.box-no-padding.bm-no-border
+                      .dataTables_wrapper.form-inline.dwrapper_guide(role="grid" )
+                        .row.datatables-top
+                          .col-sm-6
+
+                      %table.table.demo.table-bordered#guide-table
+                        %thead#dashboard-table-head
+                          %tr
+                            %th.w-50.user-table-border.text-center(data-sort-ignore="true")
+                            %th.user-table-border
+                              Name
+                            %th.w-200.user-table-border
+                              Last CheckIn
+                            %th.w-90.user-table-border.text-center
+                              Activity
+                            %th.w-90.user-table-border.text-center
+                              Distress
+                            %th.w-90.user-table-border.text-center
+                              Pain
+                            %th.w-90.user-table-border.text-center
+                              Fatigue
+                            %th.w-150.user-table-border
+                              Challenge
+                            %th.w-50.user-table-border.text-center.t-action(data-sort-ignore="true")
+                              Details
+
+                        %tbody#dashboard-d(style="display: none" )
+                          = render "index.html.haml"
+
+
+  = render "index.js.haml"
+

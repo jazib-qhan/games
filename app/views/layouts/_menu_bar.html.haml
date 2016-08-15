@@ -1,0 +1,17 @@
+.navbar.navbar-inverse.navbar-twitch{:role => "navigation"}
+  .container
+    .navbar-header
+      %a.navbar-brand{:href => "#"}
+        %span.small-nav
+          %span.logo
+            %B
+          %span.full-nav Bootsnipp >
+      %div
+        %ul.nav.navbar-nav
+          %li.active
+            %a{:href => "/"}
+              %span.small-nav{"data-placement" => "right", "data-toggle" => "tooltip", :title => "Home"}
+                %span
+                  .home
+                    %img(src="/assets/home.png" style="width: 20px")
+              %span.full-nav Home

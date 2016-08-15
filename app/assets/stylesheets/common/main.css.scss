@@ -1,0 +1,160 @@
+@import 'common/variables';
+
+html {
+  height: 100%;
+
+  &.fix {
+    overflow: hidden;
+  }
+}
+
+body {
+  text-align: center;
+  min-width: 320px;
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 600px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &.fix {
+    overflow: hidden;
+  }
+  &.login-body {
+    padding-bottom: 130px;
+  }
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+p {
+  margin: 0 0 15px;
+}
+
+ul,
+ol {
+  padding: 0 0 0 20px;
+  margin: 0 0 15px;
+
+  li {
+    margin-bottom: 10px;
+  }
+}
+
+.administrative-container {
+  text-align: left;
+}
+
+.modal {
+  z-index: 1050;
+}
+
+.modal-content {
+  text-align: left;
+}
+.header {
+  margin-top: 65px;
+}
+/* headers */
+h1, .h1, h2, .h2, h3, .h3,
+h4, .h4, h5, .h5, h6, .h6 {
+
+  &.text-uppercase {
+    letter-spacing: 1px;
+  }
+}
+
+h5, .h5,
+h6, .h6 {
+  font-family: 'newsgothicstd-bold', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.home {
+  background: url('/assets/home.png') no-repeat center right;
+}
+.alert-alert {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+table {
+  max-width: none;
+  table-layout: fixed;
+  word-wrap: break-word;
+  thead {
+    tr {
+      th {
+        vertical-align: top !important;
+        font-size: 11px !important;
+        word-wrap: break-word;
+      }
+    }
+  }
+  tbody {
+    tr{
+      td {
+        font-size: 11px !important;
+        word-wrap: break-word;
+      }
+    }
+  }
+}
+
+
+/* Different resolutions */
+@media only screen and (min-width: 480px) {
+  body {
+    padding-bottom: 580px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    padding-bottom: 300px;
+  }
+  h1, .h1 {
+    font-size: 38px;
+  }
+  h2, .h2 {
+    font-size: 32px;
+  }
+  h3, .h3 {
+    font-size: 28px;
+    small {
+      text-transform: initial;
+      font-size: 14px;
+      font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+  }
+  h4, .h4 {
+    font-size: 24px;
+  }
+  h5, .h5 {
+    font-size: 20px;
+  }
+  h6, .h6 {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  body {
+    padding-bottom: 250px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  body {
+    padding-bottom: 230px;
+  }
+}

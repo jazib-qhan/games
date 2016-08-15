@@ -1,0 +1,35 @@
+.content {
+  background-color: #eee;
+  padding: 20px;
+  margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
+  @include box-shadow(0 1px 2px rgba(0,0,0,0.15));
+}
+
+.content hr {
+	margin: 0px 0px 15px 0px;
+	border-color: black;
+}
+
+.strong {
+	font-weight: bold;
+}
+
+
+.datepicker {
+	z-index: 9999 !important;
+}
+
+.datepicker-dropdown {
+  z-index: 1060 !important;
+}
+.datepicker table tr td span.active {
+  background: #30c3ff !important;
+}
+.datepicker-dropdown.datepicker-orient-right {
+  &:before {
+    right: 20px;
+  }
+  &:after {
+    right: 21px;
+  }
+}

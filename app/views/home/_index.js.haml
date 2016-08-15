@@ -1,0 +1,11 @@
+:javascript
+  $("#guide-table").footable({
+    breakpoints: {
+      tiny: 100,
+      medium: 555
+    },
+    big: 2048
+  });
+  var offset = $('.navbar').height() + 97;
+  $('#guide-table').stickyTableHeaders({ fixedOffset: offset, cacheHeaderHeight: true });
+

@@ -1,0 +1,636 @@
+body.login .middle-container .middle-row {
+  vertical-align: top !important;
+}
+
+.new-login-m-wrapper {
+  background: #ffffff;
+}
+
+.contrast-red.contrast-background, .contrast-red .contrast-background {
+  background: #009cbc !important;
+}
+
+h1.app-title {
+  font-size: 30px !important;
+  color: #ffffff;
+}
+
+header .navbar {
+  background-color: #2e3338 !important;
+}
+
+//Change Dropdowm hover colors
+.contrast-dark header .navbar > .nav > li.dark > a {
+  background-color: #2e3338 !important;
+}
+
+header ul li.left-nav:hover {
+  background-color: #009cbc !important;
+}
+
+.contrast-dark .dropdown-menu > .active > a, .contrast-dark .dropdown-menu > .active > a:hover, .contrast-dark .dropdown-menu > .active > a:focus, .contrast-dark .dropdown-menu > li > a:hover, .contrast-dark .dropdown-menu > li > a:focus, .contrast-dark .dropdown-submenu:hover > a, .contrast-dark .dropdown-submenu:focus > a {
+  background-color: #009cbc !important;
+}
+
+//Change Dropdowm hover colors
+
+.welcome-user-text {
+  padding-top: 12px !important;
+  padding-bottom: 10px !important;
+  height: 100%;
+  color: darkgray;
+  font-family: "latosemibold", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+span.v-align-m {
+  font-family: "latosemibold", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+.logout-text-cont {
+  a {
+    font-family: "latosemibold", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  }
+}
+
+h2, .modal-title, label, ul.breadcrumb > li, .fileSpan {
+  font-family: "latosemibold", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+.contrast-dark header .navbar > .nav > li.left-nav > a:hover {
+  background: #2E2E2E !important;
+  color: #8acdde !important;
+}
+
+.navbar-main {
+  height: 90px !important;
+}
+
+header ul li.left-nav:hover {
+  background-color: #009cbc !important;
+}
+
+header ul li.gmap-logo-cont:hover {
+  background: none !important;
+}
+
+header.sub-head {
+  top: 90px !important;
+}
+
+#content-wrapper {
+  margin-top: 80px !important;
+}
+
+.gmap-btn {
+  background: #009cbc !important;
+  color: #ffffff;
+  border-radius: 5px !important;
+}
+
+.patient-top {
+  top: 130px !important;
+}
+
+.patient-new-top {
+  top: 100px !important;
+}
+
+.users-top {
+  top: 170px !important;
+}
+
+.users-new-top {
+  top: 145px !important;
+}
+
+.f-med-lg-new {
+  font-size: 1.0em !important;
+}
+
+.new-emp-btn {
+  background: #009cbc !important;
+  color: #ffffff;
+}
+
+.float-right {
+  float: right;
+}
+
+.guide-subheader .rig-fil {
+  padding-top: 5px;
+}
+
+.fa-pencil {
+  color: #009cbc !important;
+}
+
+.fa-trash, .fa-trash-o {
+  color: #f34541 !important;
+}
+
+.nw-page-header-head {
+  padding: 6px !important;
+  padding-top: 0;
+  margin-top: 0 !important;
+  background: #e0e0e0;
+
+  .page-header-new {
+    background: #e0e0e0 !important;
+  }
+}
+
+header > .container > .row > .col-sm-12 > h2 {
+  margin-top: 5px !important;
+}
+
+.no-right-pad {
+  padding-right: 0 !important;
+}
+
+.top-pad-25 {
+  padding-top: 25px !important;
+}
+
+.add-quest-select {
+  margin-right: 0;
+}
+
+.select-styled {
+  background: transparent;
+  border-radius: 5px !important;
+  border-color: #cccccc !important;
+  box-shadow: none !important;
+}
+
+.select-styled:hover, .select-styled:focus, .select-styled:active {
+  background: transparent !important;
+}
+
+.flash-guide {
+  background: #e0e0e0 !important;
+}
+
+.user-table-border {
+  border-bottom: 1px solid #dddddd !important;
+  background: #f7f7f7;
+}
+
+header ul.dropdown-menu li:hover {
+  background: #009cbc !important;
+}
+
+.btn.btn-default {
+  font-family: "latosemibold", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+.btn.btn-success {
+  font-family: "latosemibold", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  background: #009cbc !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-color: #009cbc !important;
+  text-shadow: none;
+
+  &:hover, &:active, &:focus, &:visited {
+    background: #0291BC !important;
+    color: #ffffff !important;
+    outline: none !important;
+  }
+}
+
+.btn-sign-in {
+  box-shadow: none !important;
+  border: none !important;
+  border-color: #009cbc !important;
+  text-shadow: none !important;
+}
+
+.alert-alert {
+  background: #f34541 !important;
+  color: #ffffff !important;
+}
+
+html{-webkit-font-smoothing: subpixel-antialiased;
+-webkit-text-stroke:1px transparent;}
+
+//FONTS
+@font-face {
+  font-family: 'latosemibold';
+  src: asset-url('latosemibold.otf');
+  src: asset-url('latosemibold.eot?#iefix') format('embedded-opentype'), asset-url('latosemibold.woff') format('woff'), asset-url('latosemibold.ttf') format('truetype'), asset-url('latosemibold.svg#AleoRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+//FONTS
+
+input.btn-block {
+  &:hover {
+    background: #0291BC !important;
+    color: #ffffff !important;
+  }
+}
+
+.btn-size-m {
+  line-height: 30px;
+  border-radius: 5px !important;
+  &:hover {
+    background: #0291BC !important;
+    color: #ffffff !important;
+  }
+}
+
+.btn-pad-new {
+  padding-right: 25px !important;
+  padding-left: 25px !important;
+}
+
+.add-quest-select {
+  margin-bottom: 0 !important;
+}
+
+.patient-top-70 {
+  top: 70px !important;
+}
+
+.users-new-top-90 {
+  top: 90px !important;
+}
+
+.users-new-top-92 {
+  top: 92px !important;
+}
+
+.users-new-top-125 {
+  top: 125px !important;
+}
+
+.table-bordered {
+  margin-top: 5px;
+}
+
+.rig-fil-top-7 {
+  padding-top: 7px !important;
+}
+
+#search_terms_patient {
+  max-width: 170px;
+  height: 30px !important;
+  border-top-left-radius: 4px !important;
+  border-bottom-left-radius: 4px !important;
+  padding: 2px 12px !important;
+  padding-bottom: 0 !important;
+}
+
+.fileUpload {
+  position: relative;
+  overflow: hidden;
+
+  &:hover, &:active, &:focus, &:visited {
+    background: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+}
+
+.fileUpload:hover span {
+  text-decoration: underline;
+}
+
+.fileUpload input.upload {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+
+  &:hover {
+    background: none !important;
+  }
+}
+
+.quote-upload {
+  margin: 10px;
+  padding-left: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.quote-upload-img {
+  height: 50px !important;
+  width: 51px !important;
+  background-position: right !important;
+}
+
+.quote-upload-cont {
+  margin-bottom: 0 !important;
+}
+
+.n-hvr-detail {
+  color: #009cbc !important;
+}
+
+.n-hvr-user {
+  color: #009cbc !important;
+  //  font-size: 18px !important;
+  line-height: 45px !important;
+}
+
+.guide-subheader a.n-hvr-user {
+  padding-left: 0 !important;
+}
+
+.new-emp-btn:hover {
+  color: #ffffff !important;
+  text-decoration: none !important;
+  background: #0291BC !important;
+}
+
+.v-align-m:hover, .fa:hover {
+  //  color: #009cbc !important;
+}
+
+.guide-subheader .pad-right-20 {
+  padding-right: 20px !important;
+}
+
+.guide-subheader .pad-nul {
+  padding-right: 0px !important;
+}
+
+.pad-left-0 {
+  padding-left: 0 !important;
+}
+
+.pad-left-5 {
+  padding-left: 5px !important;
+}
+
+.pad-right-10 {
+  padding-right: 10px !important;
+}
+
+.api\/apis-back {
+  overflow-y: scroll !important;
+}
+
+.main-fancy-complete {
+  cursor: default !important;
+}
+
+.main-fancy-start {
+  cursor: default !important;
+}
+
+.fancybox-lock .fancybox-overlay {
+  overflow-y: auto !important;
+}
+
+.fancybox-lock body {
+  overflow: auto !important;
+}
+
+.fancybox-margin {
+  margin-right: 0 !important;
+}
+
+.main-fancy-resource {
+  margin-left: 5px;
+}
+
+thead.tableFloatingHeaderOriginal > tr > th {
+  border-top: 1px solid #dddddd !important;
+  border-left: 1px solid #dddddd !important;
+}
+
+.guide-subheader {
+  min-height: 98px;
+}
+
+.patient-subheader {
+  min-height: 97px;
+}
+
+.users-new-top-90 {
+  //  top: 92px !important;
+}
+
+.q-rm-btn {
+  line-height: 30px;
+}
+
+#question-table-head, #contacts-table-head, #patients-table-head, #challenges-table-head, #dashboard-table-head, #activities-table-head {
+  z-index: 1 !important;
+}
+
+.mg-top-10 {
+  margin-top: 15px;
+}
+
+.selectboxit-optgroup-header {
+  color: #000000;
+}
+
+.user_zone_for_activity {
+  display: none;
+}
+
+.display-inline {
+  display: inline-block;
+}
+
+.img-with-toggle {
+  span.footable-toggle {
+    height: 100%;
+    float: left;
+    line-height: 34px !important;
+    margin-right: 3px;
+  }
+}
+
+.fileSpan {
+  text-shadow: none !important;
+  color: #009cbc !important;
+}
+
+.fileUpload.btn {
+  margin-top: 8px !important;
+}
+
+.quote-upload-img {
+  height: 100px !important;
+  width: 102px !important;
+}
+
+figure.full_width_in_user {
+  float: left;
+}
+
+.img-thumbnail {
+  border: none !important;
+  background-color: transparent !important;
+}
+
+.align-with-image {
+  padding-top: 68px;
+  float: right;
+}
+
+.w-hund {
+  width: 100%;
+  float: left;
+}
+
+.no-pad {
+  padding-left: 0 !important;
+}
+
+.fig-70 {
+  width: 70px !important;
+  height: 70px !important;
+}
+
+.h2-alike {
+  font-size: 24.5px;
+  font-weight: 400;
+  color: #222222;
+  font-family: "latosemibold", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  padding-top: 10px;
+}
+
+.pad-top-15 {
+  padding-top: 17px;
+}
+
+.no-curs {
+  cursor: default !important;
+  figure {
+    cursor: default !important;
+  }
+}
+
+.pad-nul {
+  padding-right: 0px !important;
+}
+
+.make-left-margin-30 {
+  margin-left: 30% !important;
+}
+
+.make-left-margin-35 {
+  margin-left: 35% !important;
+}
+
+.fileUpload.btn {
+  margin: 0 !important;
+  font-size: 14px !important;
+  font-weight: bold;
+  .fileSpan {
+    margin-left: 10px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-weight: normal;
+    font-size: 13px;
+  }
+}
+
+.marg-3 {
+  margin-top: -3px;
+}
+
+.mg-left-5 {
+  margin-left: 5px;
+}
+.table thead > tr > th, .table thead > tr > td, .table tbody > tr > th, .table tbody > tr > td, .table tfoot > tr > th, .table tfoot > tr > td {
+  padding-top: 10px;
+  padding-bottom: 6px;
+}
+.fa-ex-m {
+  font-size: 20px !important;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.line-height-30 {
+  line-height: 30px;
+}
+.cursor-hand {
+  cursor: move; /* fallback if grab cursor is unsupported */
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+//LOADER
+
+
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 4px solid #428bca;
+  top: 50%;
+  animation: loader 4s infinite ease;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #009cbc;
+  animation: loader-inner 4s infinite ease-in;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(180deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+
+  25% {
+    height: 0%;
+  }
+
+  50% {
+    height: 100%;
+  }
+
+  75% {
+    height: 100%;
+  }
+
+  100% {
+    height: 0%;
+  }
+}
