@@ -1,0 +1,165 @@
+:javascript
+  //$("#sessions-api-table").footable({
+  //  breakpoints: {
+  //    tiny: 100,
+  //    medium: 555
+  //  },
+  //  big: 2048
+  //});
+  //  $(".apis-table").footable({
+  //    breakpoints: {
+  //      tiny: 100,
+  //      medium: 555
+  //    },
+  //    big: 2048
+  //  });
+
+
+
+  function syntaxHighlight(json) {
+      json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+          var cls = 'number';
+          if (/^"/.test(match)) {
+              if (/:$/.test(match)) {
+                  cls = 'key';
+              } else {
+                  cls = 'string';
+              }
+          } else if (/true|false/.test(match)) {
+              cls = 'boolean';
+          } else if (/null/.test(match)) {
+              cls = 'null';
+          }
+          return '<span class="' + cls + '">' + match + '</span>';
+      });
+  }
+
+  //Session APIS
+  var obj_ok = {data: {patient: {id: 1,patient_id: "b3f94ae06a26facba805754ca0400ac0", last_sign_in_at: "2016-01-21T09:49:28.049Z", version: null, ios: null, watchos: null,created_at: "2015-10-12T12:34:42.569Z",updated_at: "2015-10-12T12:34:42.569Z"}},status: "ok"};
+  var str_ok = JSON.stringify(obj_ok, undefined, 2);
+  $('.session-pre-ok').html(syntaxHighlight(str_ok));
+
+  var obj_not_found = {data: {message: "No such user found."},status: "not_found"};
+  var str_not_found = JSON.stringify(obj_not_found, undefined, 2);
+  $('.session-pre-not-found').html(syntaxHighlight(str_not_found));
+
+  //Patient Challenge APIS
+  var obj_ok_pat_challen_get = {data: {advertisements: {id: 1,name: "abc",lat: 70.1,lng: 80.1, photo: "BASE64://DATA", description: "ABC"}},status: "ok"};
+    var str_ok_pat_challen_get = JSON.stringify(obj_ok_pat_challen_get, undefined, 2);
+  $('.pat-challen-pre-ok-get').html(syntaxHighlight(str_ok_pat_challen_get));
+
+  var obj_ok_pat_challen_get_1 = {data: {advertisements: [{id: 1,name: "abc",lat: 70.1,lng: 80.1, photo: "BASE64://DATA", description: "ABC"},{id: 2,name: "def",lat: 70.1,lng: 80.1, photo: "BASE64://DATA", description: "ABC"}] },status: "ok"};
+    var str_ok_pat_challen_get_1 = JSON.stringify(obj_ok_pat_challen_get_1, undefined, 2);
+  $('.pat-challen-pre-ok-get-1').html(syntaxHighlight(str_ok_pat_challen_get_1));
+
+  var obj_not_found_pat_challen = {data: {message: "Something went wrong."},status: "bad_request"};
+  var str_not_found_pat_challen = JSON.stringify(obj_not_found_pat_challen, undefined, 2);
+  $('.pat-challen-not-found').html(syntaxHighlight(str_not_found_pat_challen));
+
+  //Challenge APIS
+  var obj_ok_challen = {data: {customer: {id: 1,name: "ABC",email: "abc@abc.com",lat: 10.1,lng: 81.2}},status: "ok"};
+  var str_ok_challen = JSON.stringify(obj_ok_challen, undefined, 2);
+  $('.challen-pre-ok').html(syntaxHighlight(str_ok_challen));
+  $('.challen-not-found').html(syntaxHighlight(str_not_found));
+
+  //Check-in APIS
+  var obj_ok_check_in = {data: {check_in_types: [{id: 4,check_in_type: "Bi-Weekly Questions",total_questions: 0, active: true},{id: 1,check_in_type: "Daily Check-in",total_questions: 4, active: false},]},status: "ok"};
+  var str_ok_check_in = JSON.stringify(obj_ok_check_in, undefined, 2);
+  $('.check-in-pre-ok').html(syntaxHighlight(str_ok_check_in));
+  $('.check-in-not-found').html(syntaxHighlight(str_not_found));
+
+  //patient Check-in APIS
+  //var obj_ok_check_in_p = {data: {patient_check_in: {id: 4,patient_id: 1,check_in_type_id: 2,status: "COMPLETED",at_date: "2015-10-13",completed_at: "2015-10-13T12:39:44.384Z"}},status: "ok"};
+  //var str_ok_check_in_p = JSON.stringify(obj_ok_check_in_p, undefined, 2);
+  //$('.pat-check-pre-ok').html(syntaxHighlight(str_ok_check_in_p));
+  //$('.pat-check-not-found').html(syntaxHighlight(str_not_found_pat_challen));
+  //
+  //var obj_ok_check_in_p_u = {data: {patient_check_in: {id: 4,patient_id: 1,check_in_type_id: 2,status: "COMPLETED",at_date: "2015-10-13",completed_at: "2015-10-13T12:39:44.384Z"}},status: "ok"};
+  //var str_ok_check_in_p_u = JSON.stringify(obj_ok_check_in_p_u, undefined, 2);
+  //$('.pat-check-up-pre-ok').html(syntaxHighlight(str_ok_check_in_p_u));
+  //$('.pat-check-up-not-found').html(syntaxHighlight(str_not_found_pat_challen));
+
+  //Questions APIS
+  var obj_ok_questions = {data: {questions: [{id: 1,question_type: "MCQ",check_in_type_id: 1,title: "How are you today?",answers: [{score: 5,value: "Great"},{score: 4,value: "Pretty Good"},{score: 3,value: "OK"},{score: 2,value: "Not So Good"},{score: 1,value: "Awful"}], sort_order: 1, active: true},{
+                         id: 2,question_type: "RANGE",check_in_type_id: 2,title: "Please rate your",answers: ["Pain"], sort_order: 2, active: false},]},status: "ok"};
+  var str_ok_questions = JSON.stringify(obj_ok_questions, undefined, 2);
+  $('.questions-pre-ok').html(syntaxHighlight(str_ok_questions));
+  $('.questions-not-found').html(syntaxHighlight(str_not_found));
+
+  var obj_ok_questions_c = {data: {questions: [{id: 1,question_type: "MCQ",check_in_type_id: 1,title: "How are you today?",answers: [{score: 5,value: "Great"},{score: 4,value: "Pretty Good"},{score: 3,value: "OK"},{score: 2,value: "Not So Good"},{score: 1,value: "Awful"}], sort_order: 1, active: true},{
+                                                    id: 2,question_type: "RANGE",check_in_type_id: 1,title: "Please rate your",answers: ["Pain"], sort_order: 2, active: false},]},status: "ok"};
+  var str_ok_questions_c = JSON.stringify(obj_ok_questions_c, undefined, 2);
+  $('.questions-c-pre-ok').html(syntaxHighlight(str_ok_questions_c));
+
+  //Question Answer APIS
+  var obj_ok_questions_ans = {data: {message: "Record saved successfully."},status: "ok"};
+  var str_ok_questions_ans = JSON.stringify(obj_ok_questions_ans, undefined, 2);
+  $('.question-ans-pre-ok').html(syntaxHighlight(str_ok_questions_ans));
+  $('.question-ans-not-found').html(syntaxHighlight(str_not_found_pat_challen));
+
+  var obj_ok_questions_ans = {data: {message: "No record found against Check-In with ID = ID"},status: 400};
+  var str_ok_questions_ans = JSON.stringify(obj_ok_questions_ans, undefined, 2);
+  $('.question-ans-r-not-found').html(syntaxHighlight(str_ok_questions_ans));
+
+  //Resources APIS
+  var obj_ok_resources = {data: {resources: [{id: 7, category: "Additional Resources", active: false, images: {thumb: "http://phd.empower.s3-us-west-1.amazonaws.com/contacts/avatars/000/000/002/thumb/data?1444811026",medium: "http://phd.empower.s3-us-west-1.amazonaws.com/contacts/avatars/000/000/002/medium/data?1444811026",original: "http://phd.empower.s3-us-west-1.amazonaws.com/contacts/avatars/000/000/002/original/data?1444811026"}}]},status: "ok"};
+  var str_ok_resources = JSON.stringify(obj_ok_resources, undefined, 2);
+  $('.resources-pre-ok').html(syntaxHighlight(str_ok_resources));
+  $('.resources-not-found').html(syntaxHighlight(str_not_found_pat_challen));
+
+  //Resource Details Answer APIS
+  var obj_ok_resource_details = {data: {resource_details: [{id: 14, name: "Gym",resource_id: 7,service_area: "this is a gym",phone: "21432325",email: "tes@example.com",location: "abc street, abc city",website: "http://www.example.com", active: true,images: {thumb: null,medium: null,original: null}}]},status: "ok"};
+  var str_ok_resource_details = JSON.stringify(obj_ok_resource_details, undefined, 2);
+  $('.resource-details-pre-ok').html(syntaxHighlight(str_ok_resource_details));
+  $('.resource-details-not-found').html(syntaxHighlight(str_not_found_pat_challen));
+
+  //Contacts APIS
+  var obj_ok_contacts = {data: {cohort: [{id: 5, uuid: "f6c782c1-526f-42df-9c28-27f7e6896817",connect_type: "COHORT",name: "Leela",profession: "asda",phone: "ad",email: "da@aas.com",address: "adsda",images: {thumb: null,medium: null,original: null}},], treatment: [{id: 5, uuid: "f6c782c1-526f-42df-9c28-27f7e6896818",connect_type: "COHORT",name: "Leela",profession: "asda",phone: "ad",email: "da@aas.com",address: "adsda",images: {thumb: null,medium: null,original: null}},], friends: [{id: 5, uuid: "f6c782c1-526f-42df-9c28-27f7e6896819",connect_type: "COHORT",name: "Leela",profession: "asda",phone: "ad",email: "da@aas.com",address: "adsda",images: {thumb: null,medium: null,original: null}},],patients: [{id: 14, uuid: "f6c782c1-526f-42df-9c28-27f7e6896810",patient_id: "6c456bf110bc1d277907b71ffa0fbe9a",first_name: "test",last_name: "Bachand",phone_number: "111-333-2680",email_address: "test@comcast.net",cohort: "YES",text: "YES",last_sign_in: "2016-02-29T15:25:49.727Z", images: {thumb: null,medium: null,original: null}},], resources: [{id: 37, uuid: "f6c782c1-526f-42df-9c28-27f7e689681v",name: "aa",service_area: "ad",phone: "dad",email: "da@asa.com",location: "ad",website: "da",active: false,images: {thumb: null,medium: null,original: null}}]},status: "ok"};
+  var str_ok_contacts = JSON.stringify(obj_ok_contacts, undefined, 2);
+  $('.contacts-pre-ok').html(syntaxHighlight(str_ok_contacts));
+  $('.contacts-not-found').html(syntaxHighlight(str_not_found_pat_challen));
+
+  var obj_ok_contacts_no_cohort = {data: {friends: [{id: 5, uuid: "f6c782c1-526f-42df-9c28-27f7e6896816",connect_type: "FRIENDS",name: "Leela",profession: "asda",phone: "ad",email: "da@aas.com",address: "adsda",images: {thumb: null,medium: null,original: null}},]},status: "ok"};
+  var str_ok_contacts_no_cohort = JSON.stringify(obj_ok_contacts_no_cohort, undefined, 2);
+  $('.contacts-pre-ok-no-cohort').html(syntaxHighlight(str_ok_contacts_no_cohort));
+
+  var obj_ok_contacts_no_cohort_treatment = {data: {treatment: [{id: 5, uuid: "f6c782c1-526f-42df-9c28-27f7e6896814",connect_type: "TREATMENT",name: "Leela",profession: "asda",phone: "ad",email: "da@aas.com",address: "adsda",images: {thumb: null,medium: null,original: null}},], resources: [{id: 37, uuid: "f6c782c1-526f-42df-9c28-27f7e6896815",name: "aa",service_area: "ad",phone: "dad",email: "da@asa.com",location: "ad",website: "da",active: false,images: {thumb: null,medium: null,original: null}}]},status: "ok"};
+  var str_ok_contacts_no_cohort_treatment = JSON.stringify(obj_ok_contacts_no_cohort_treatment, undefined, 2);
+  $('.contacts-pre-ok-no-cohort-treatment').html(syntaxHighlight(str_ok_contacts_no_cohort_treatment));
+
+  var obj_ok_contacts_yes_cohort = {data: {cohort: [{id: 5, uuid: "f6c782c1-526f-42df-9c28-27f7e6896812",connect_type: "COHORT",name: "Leela",profession: "asda",phone: "ad",email: "da@aas.com",address: "adsda",images: {thumb: null,medium: null,original: null}},],patients: [{id: 14, uuid: "f6c782c1-526f-42df-9c28-27f7e6896813",patient_id: "6c456bf110bc1d277907b71ffa0fbe9a",first_name: "test",last_name: "Bachand",phone_number: "111-333-2680",email_address: "test@comcast.net",cohort: "YES",text: "YES",last_sign_in: "2016-02-29T15:25:49.727Z", images: {thumb: null,medium: null,original: null}},]},status: "ok"};
+  var str_ok_contacts_yes_cohort = JSON.stringify(obj_ok_contacts_yes_cohort, undefined, 2);
+  $('.contacts-pre-ok-yes-cohort').html(syntaxHighlight(str_ok_contacts_yes_cohort));
+
+  var obj_ok_contacts_u = {data: {contact: {id: 2, uuid: "f6c782c1-526f-42df-9c28-27f7e6896811",connect_type: "FRIENDS",name: "test",profession: "ABC",phone: "6363635",email: "test@example.com",address: "test city",
+                          images: {thumb: "http://phd.empower.s3-us-west-1.amazonaws.com/contacts/avatars/000/000/002/thumb/data?1444811026",medium: "http://phd.empower.s3-us-west-1.amazonaws.com/contacts/avatars/000/000/002/medium/data?1444811026",original: "http://phd.empower.s3-us-west-1.amazonaws.com/contacts/avatars/000/000/002/original/data?1444811026"}}},status: "ok"};
+  var str_ok_contacts_u = JSON.stringify(obj_ok_contacts_u, undefined, 2);
+  $('.contacts-up-pre-ok').html(syntaxHighlight(str_ok_contacts_u));
+
+  var obj_ok_contacts_d = {data: {message: "Record deleted successfully."},status: "ok"};
+  var str_ok_contacts_d = JSON.stringify(obj_ok_contacts_d, undefined, 2);
+  $('.contacts-del-pre-ok').html(syntaxHighlight(str_ok_contacts_d));
+
+  //Patient Activity APIS
+  var obj_ok_p_activity = {data: {message: "Record saved successfully."},status: "ok"};
+  var str_ok_p_activity = JSON.stringify(obj_ok_p_activity, undefined, 2);
+  $('.p-activity-pre-ok').html(syntaxHighlight(str_ok_p_activity));
+  $('.p-activity-not-found').html(syntaxHighlight(str_not_found_pat_challen));
+
+  //Stats APIS
+  var obj_ok_week_check = {data: {this_week_check_ins: [{at_date: "2015-10-11",completeness_percentage: 99.9},{at_date: "2015-10-12",completeness_percentage: 0},{at_date: "2015-10-13",completeness_percentage: 25},{at_date: "2015-10-14",completeness_percentage: 33.3},
+                          {at_date: "2015-10-15",completeness_percentage: 66.6},
+                          {at_date: "2015-10-16",completeness_percentage: 0},
+                          {at_date: "2015-10-17",completeness_percentage: 0}]},status: "ok"};
+  var str_ok_week_check = JSON.stringify(obj_ok_week_check, undefined, 2);
+  $('.week-check-pre-ok').html(syntaxHighlight(str_ok_week_check));
+  $('.week-check-not-found').html(syntaxHighlight(str_not_found_pat_challen));
+
+  //Quotes APIS
+  var obj_ok_quotes = {data: {quotes: [{id: 24,body: "A journey of a thousand miles begins with but a single step.",source: "Chinese proverb", active: true},
+                      {id: 13,body: "An obstacle is often a stepping stone.",source: "Prescott Bush", active: false},]},status: "ok"};
+  var str_ok_quotes = JSON.stringify(obj_ok_quotes, undefined, 2);
+  $('.quotes-pre-ok').html(syntaxHighlight(str_ok_quotes));
+  $('.quotes-not-found').html(syntaxHighlight(str_not_found));
+

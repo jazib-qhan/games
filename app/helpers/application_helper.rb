@@ -60,4 +60,13 @@ module ApplicationHelper
     "gMaps"
   end
 
+  ##
+  # Public method which shows all the possible apis as Array of
+  # hashes.
+
+  def api_options
+    options = [{id: "challenge_apis", title: "Customers"},{id: 'patient_challenge_apis', title: "Advertisements"}].sort_by { |k| k[:title]}
+  end
+
+
 end

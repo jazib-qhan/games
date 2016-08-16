@@ -1,0 +1,104 @@
+.box.bordered-box.blue-border{:style => "margin-bottom:0;"}
+  .row
+    .col-sm-12
+      .box.bordered-box.orange-border{:style => "margin-bottom:30px;"}
+        .box-content.box-no-padding.bm-no-border
+          .dataTables_wrapper.form-inline.dwrapper_guide(role="grid" )
+            .row.datatables-top
+              .col-sm-6.pad-left-5
+                .dataTables_length.guide-details#guide_dataTables_length
+                  %label
+                    %ul.breadcrumb.n-guide-filter-breadcrumb#guide-filter-breadcrumb
+                      %li.strong-b
+                        Advertisements
+
+          %table.table.demo.table-bordered.footable
+            %thead
+              %tr
+                %th.user-table-border.w-80
+                  HTTP Verb
+                %th.user-table-border.w-300(data-hide="all")
+                  Path
+                %th.user-table-border.w-200(data-hide="phone,tablet")
+                  Params
+                %th.user-table-border.w-200(data-hide="all")
+                  Used for
+                %th.user-table-border.w-200
+                  Request Format
+                %th.user-table-border.w-300
+                  Response
+            %tbody
+              %tr
+                %td
+                  POST
+                %td.w-50 /api/v1/advertisements
+                %td.w-50 auth_token, customer_id, lat, lng, image, name, photo(Base 64 or AWS link), Description
+                %td.w-50
+                  To create advertisements.
+                %td.w-50
+                  api/v1/advertisements
+                  %br
+                  %br
+                  %br
+                  %strong
+                    Parameters
+                  %br
+                  %ul
+                    %li
+                      auth_token={auth_token}
+                    %li
+                      customer_id={customer_id}
+                    %li
+                      lat={lat}
+                    %li
+                      lng={lng}
+                    %li
+                      image={Base 64 Image OR AWS-S3 link to image}
+                    %li
+                      Description={Description}
+                %td
+                  %strong
+                    Response Type:
+                  OK
+                  %pre.prettyprint.prettyprinted.pat-challen-pre-ok-get
+                  %strong
+                    Response Type:
+                  Bad Request
+                  %pre.prettyprint.prettyprinted.pat-challen-not-found
+
+              %tr
+                %td
+                  GET
+                %td.w-50 /api/v1/advertisements
+                %td.w-50 auth_token
+                %td.w-50
+                  To get advertisements.
+                %td.w-50
+                  api/v1/advertisements
+                  %br
+                  %br
+                  %br
+                  %strong
+                    Parameters
+                  %br
+                  %ul
+                    %li
+                      auth_token={auth_token}
+                %td
+                  %strong
+                    Response Type:
+                  OK
+                  %pre.prettyprint.prettyprinted.pat-challen-pre-ok-get-1
+                  %strong
+                    Response Type:
+                  Bad Request
+                  %pre.prettyprint.prettyprinted.pat-challen-not-found
+
+:javascript
+  $(".apis-table").footable({
+    breakpoints: {
+      tiny: 100,
+      medium: 555
+    },
+    big: 2048
+  });
