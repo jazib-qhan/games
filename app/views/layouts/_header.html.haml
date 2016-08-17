@@ -1,24 +1,15 @@
 %header.navbar-fixed-top.main-h
   %nav.navbar.navbar-default.navbar-main
-    %ul.nav.navbar-nav.maim-left-header-opt(style="float: left;width: 80%;" )
-      %li.gmap-logo-cont.em-txt-header(class="pad-em-txt-header")
-        %span.gmap-logo-text
-          gMaps
-        %br
-        %span.gmap-logo-text
-          Check Your Trails
-        %br
-      %li.dropdown.dark.user-menu.left-nav
-        %a.dark-or-med.header-t{:href => "/"}
-          %i.icon-dashboard
+    %ul.nav.navbar-nav(style="float: left" )
+      %li
+        %a(href="/")
+          G-Maps
+    %ul.nav.navbar-nav
+      %li
+        %a(href="/")
+          %i.fa.fa-dashboard
           DASHBOARD
-
-      %li.dropdown.dark.user-menu.left-nav
-        %a.dark-or-med.header-t{:href => "/plans"}
-          %i.icon-dashboard
-          My Structure
-
-      %li.dropdown.dark.user-menu.left-nav
-        %a.dark-or-med.header-t{:href => "/apis"}
-          %i.icon-dashboard
+      %li
+        %a(href="/apis")
+          %i.fa.fa-user
           API
